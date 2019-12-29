@@ -1,0 +1,7 @@
+civil, 100
+chemical, 100
+electrical, 100
+mechanical, 100
+software, 100
+materials, 100
+engphys, 50

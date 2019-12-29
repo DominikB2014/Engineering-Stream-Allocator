@@ -1,0 +1,4 @@
+macid1, firstname, lastname, male, 9.2, [software, chemical, materials], True
+smithj, Jane, Smith, female, 10.0, [civil, engphys, software, materials], False
+smithj2, John, Smith, male, 7.0, [mechanical, electrical, materials, mechanical, electrical], False
+brownc, Charlie, Brown, male, 3.9, [engphys, software, chemical, materials], True
