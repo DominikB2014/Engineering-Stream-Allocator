@@ -1,0 +1,375 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{paralist}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{indentfirst}
+
+\oddsidemargin 0mm
+\evensidemargin 0mm
+\textwidth 160mm
+\textheight 200mm
+
+\pagestyle {plain}
+\pagenumbering{arabic}
+
+\newcounter{stepnum}
+
+\title{Assignment 2}
+\author{Dominik Buszowiecki - buszowid}
+\date{\today}
+
+\begin {document}
+
+\maketitle
+
+The purpose of this software design exercise is to write a Python program responsible for allocating first-year
+engineering students at McMaster University, into their second-year program using a formal specification.
+The program consists of the following files: AALst.py, DCapALst.py, Read.py, SALst.py, SeqADT.py, StdntAllocTypes.py,
+test\_All.py, and Makefile.
+
+\section{Testing of the Original Program}
+
+The approach taken to test the required modules was to ensure that every line of code is correct and works as intended.
+To assist with this goal, the pytest coverage option was used to see the percentage of lines covered in every module.
+Due to the fact that most of the methods were quite small, it was easy to determine what test cases should be performed
+for each method.
+
+There was a total of 30 test performed, the tests and their rational are written below.
+\medskip
+
+\textbf{SeqADT.py:}
+\begin{itemize}
+
+  \item SeqADT.\_\_init\_\_
+    \begin{enumerate}
+      \item test\_empty: Ensures that when we construct a object of type SeqADT using an empty list,
+      the object also contains an empty list.
+    \end{enumerate}
+
+  \item SeqADT.start
+    \begin{enumerate}
+      \item test\_start: Ensures that when we run the start method, the index state variable gets reset to 0.
+    \end{enumerate}
+
+  \item SeqADT.next
+    \begin{enumerate}
+      \item test\_next: Tests that the next item in the sequence is correct.
+      \item test\_stop\_iteration: Checks if StopIteration is raised when there are no more items in the sequence.
+    \end{enumerate}
+
+  \item SeqADT.end
+    \begin{enumerate}
+      \item test\_end\_false: Tests if the end method returns False when there are items left in the sequence.
+      \item test\_end\_true: Tests if the end method return True if there are no items left in the sequence.
+    \end{enumerate}
+
+\end{itemize}
+\medskip
+
+\textbf{DCapALst.py:}
+\begin{itemize}
+
+  \item DCapALst.init
+    \begin{enumerate}
+      \item test\_constructor: Tests if the constructor successfully creates an empty list.
+    \end{enumerate}
+
+  \item DCapALst.add
+    \begin{enumerate}
+      \item test\_add: Ensures that when we add a department and its capacity, it appears in DCapAList.
+      \item test\_add\_exception: Tests if a KeyError is raised when we attempt to add a department that has been added
+      already.
+    \end{enumerate}
+
+  \item DCapALst.remove
+    \begin{enumerate}
+      \item test\_remove: Ensures that a department can be successfully removed from DCapALst.
+      \item test\_remove\_exception: Ensures that the remove method raises a KeyError if the department it is trying
+      to remove is not in DCapALst.
+    \end{enumerate}
+
+  \item DCapALst.elm
+    \begin{enumerate}
+      \item test\_elm\_true: Tests that the elm method returns True if a department has already been added.
+      \item test\_elm\_false: Tests that the elm method returns False if a department has not been added.
+    \end{enumerate}
+
+  \item DCapALst.capacity
+    \begin{enumerate}
+      \item test\_capacity: Ensures that the capacity method returns the correct capacity of a particular department.
+      \item test\_capacity\_exception: Tests if the capacity method raises a KeyError if the department given is
+      not in DCapALst.
+    \end{enumerate}
+
+\end{itemize}
+\medskip
+
+\textbf{SALst.py:}
+\begin{itemize}
+
+  \item SALst.init
+    \begin{enumerate}
+      \item test\_constructor: Tests that the constructor successfully creates a empty list.
+    \end{enumerate}
+
+  \item SALst.add
+    \begin{enumerate}
+      \item test\_add: Tests that the add method successfully adds a students macid and their information into the
+      student list (SALst).
+      \item test\_add\_exception: Ensures that the add method raises a KeyError when we try to add a student that has
+      already been added.
+    \end{enumerate}
+
+  \item SALst.remove
+    \begin{enumerate}
+      \item test\_remove: Ensures a student can be successfully deleted from SALst.
+      \item test\_remove\_exception: Tests that the remove method raises a KeyError when we try to remove a student
+      that is not in SALst.
+    \end{enumerate}
+
+  \item SALst.elm
+    \begin{enumerate}
+      \item test\_elm\_true: Tests that the elm method returns True when a student is in SALst.
+      \item test\_elm\_false: Tests that the elm method returns False when a student is not in SALst.
+    \end{enumerate}
+
+  \item SALst.info
+    \begin{enumerate}
+      \item test\_info: Ensures that the info method returns the correct information of a particular student.
+      \item test\_info\_exception: Test that the info method raises a KeyError if we try to retrieve information of
+      a student that is not in SALst.
+    \end{enumerate}
+
+  \item SALst.sort
+    \begin{enumerate}
+      \item test\_sort\_empty: Tests that the sort method is able to return a empty list.
+      \item test\_sort: Tests that the sort method is able to read the filtering function correctly and sort only
+      the students who pass the filter by GPA.
+    \end{enumerate}
+
+  \item SALst.average
+    \begin{enumerate}
+      \item test\_average: Tests that the average method can read the filtering function correctly and compute the
+      average amongst the students who pass the filter.
+      \item test\_average\_exception: Ensures that a ValueError is raised when we try to compute the average between
+      0 students (Due to no students passing the filter).
+    \end{enumerate}
+
+  \item SALst.allocate
+    \begin{enumerate}
+      \item test\_allocate\_normal: A normal case for allocating students where some students: have free choice,
+      get their first choice, and do not get their first choice.
+      This test case ensures that students are allocated into the correct program.
+      \item test\_allocate\_exception: Ensures that the allocate method will raise a RuntimeError if a student does not
+      get into any of their choices because all their choices are full.
+    \end{enumerate}
+
+\end{itemize}
+\medskip
+
+In the end, all test cases passed without any issues and pytest showed 100\% coverage for all tested modules.
+However, I did discover a minor issue during the first round of testing.
+The issue occurred in the remove method of DCapALst.py, the issue was forgetting to add a return after I removed the
+student from the list.
+The lack of a return meant that the method would run the remaining lines of code after the deletion, therefore
+always raising a KeyError no matter what the input was.
+The problem however, was easy to debug because the modular design of the program allowed me to pinpoint it with ease.
+
+\section{Results of Testing Partner's Code}
+
+  After running the test cases on my partner's code, all but one passed.
+
+  By looking through my partner's code, it was clear why there was such a high rate of success.
+  This is because my partner's code was very similar (almost identical) to mine.
+  The reason for the similarities is due to the use of a formal design specification which when understood correctly,
+  can only be interpreted in one way.
+
+  The test case that failed was test\_add in DCapALst.
+  The reason for failure is due to the fact the my partner used dictionaries whereas I used a list of tuples to
+  represent a department and its capacity.
+  Therefore when test\_add accessed the state variable directly, it expected a list and not a dictionary.
+  With a minor modification to each method in DCapALst, I was able to get all the test cases to pass.
+  The modification done was changing the state variable to a list and changing the indexing in each method to the one
+  used with lists instead of dictionaries.
+
+\section{Critique of Given Design Specification}
+
+  The thing I enjoyed about the given design specification is that it was not very ambiguous.
+  The reason for this is due to the use of a formal design specification which uses mathematical notation to
+  precisely define the program.
+  The lack of ambiguity provided me with a greater degree of confidence that my implementation was correct.
+
+  What I disliked about the design is that I felt as though it was much less interesting to program in comparison to A1.
+  The program was broken up into many small pieces that were defined formally making it obvious on the way
+  it should be coded.
+  This made me feel less creative as many design decisions were not imposed by me.
+
+  Another thing I did not like is reading the math notation in order to understand what a particular method should do.
+  It seems backwards to me that we read the notation, convert it back to a natural language (in our mind) and
+  once again write it formally into python.
+  I also felt as though reading the math notation took much longer to understand than reading the natural language
+  version in A1.
+
+  In order to improve the specification, my suggestion would be to somehow combine the natural design of A1 with the formal
+  design of A2.
+  Although it would likely take longer to write such a specification, it would be both less ambiguous and quicker to
+  understand.
+
+\section{Answers}
+
+
+\begin{enumerate}[a)]
+
+  \item
+  The main advantage with the use a formal design specification is the lack of ambiguity for the programmer.
+  The lack of ambiguity results in less confusion and questions regarding the implementation.
+  As mentioned before, when understood correctly, a formal design specification should only be interpreted in one way.
+  The same cannot be said about a natural language specification
+  This will give the one who created the specification a great deal of assurance that the program will work as
+  he intended it to.
+
+  One of the disadvantages that I see in a formal design specification is the background knowledge required to
+  understand what is being asked of you.
+  In order to read a MIS, you require some knowledge on discrete mathematics in order to determine what a particular
+  method should do.
+  Even if you have this knowledge, it could take a while to convert the given notation into something more
+  understandable.
+  If the specification used natural language, it would be easier to understand what the program should do.
+
+  Another disadvantage to the given design specification is the lack of creativity allowed for the programmer.
+  The specification is given in such a precisely defined way that the programmer often doesn't have to
+  come up with their own algorithms.
+  Instead, they just follow exactly what the specification says.
+  In a natural language specification, it is often up to the programmer to come up with the algorithms as well as
+  make their own design decisions.
+
+  \item In my opinion, the best way to change the assumption that the GPA is between 0 and 12 to an exception is to
+  modify the specification for the Read module.
+  The change required would be checking if the GPA is in the correct range before adding a student to SALst in the
+  load\_stdnt\_data method.
+  If the student is not in the correct range, we simply raise an exception.
+  The reason I believe this is the best way is because when the program is actually used, the user would first have to
+  load student data from a file.
+  By adding the exception in the Read module, we catch a mistake early and prevent it from carrying into the rest of the
+  program.
+
+  If the exception is incorporated in Read, the specification would not require you to replace a record type with a new
+  ADT. This is because we raise the exception before we even add a student into the record type rather than inside
+  the type.
+
+  \item If we ignore sort, average, and allocate in SALst and DCapALst, the modification required would be
+  incorporating some form of inheritance between the classes.
+  This could be done several ways, such as creating a general list class and having SALst and DCapALst inherit list.
+  The list class would need to contain methods that both SALst and DCapALst share in common such as init, remove,
+  and elm.
+  Then, when we create DCapALst and SALst we only need to add on the methods that are specific to these classes such as
+  capacity for DCapALst and allocate, average, sort and info for SALst.
+
+  \item A2 is more general than A1 in a few ways.
+  One of the main ways this can be observed is in the average and sort function of the SALst module.
+
+  In A1, the sort function returned a list of every student sorted by their GPA.
+  However, in A2 the sort method is able to return a particular subset of students sorted by their GPA.
+  This subset can be specified by the programmer.
+
+  In A1, the average function was only able to compute the average amongst a particular gender whereas in A2,
+  we are able to define what subset of students we want to compute the average amongst.
+
+  \item By using SeqADT instead of a regular list, we provide level encapsulation.
+  Encapsulation means hiding the internal information of one piece of code from another.
+  By using SeqADT, we are not able to access the list of choices directly, instead we must access it through the
+  methods of the SeqADT class.
+  The advantage to encapsulation is that you can be more confident that accidental changes cannot be made to the
+  list as only acceptable changes defined by your methods are allowed.
+
+    Another advantage to using SeqADT rather than a list is it makes other functions easier to program and read.
+  When we create a abstract data type like SeqADT, we often model it based on real world things.
+  In this case we are modelling SeqADT after a sequence of values.
+  This makes it much easier to program and read because the code will look closer to natural language.
+
+  \item The advantage of using Enums is to know exactly what the possible options are for a particular field.
+  For example, if we wanted to know the possible engineering choices, we simply look at the documentation for
+  StdntAllocTypes and observe the possible values.
+  We also do not have to worry about spelling as the spelling is precisely defined.
+  The fact that we don't have to worry about spelling benefits the programmer as they will likely encounter far less
+  problems related to grammar.
+
+  The reason why Enums were not introduced in the specification for macids is because there are too many
+  possible macid's.
+  Remember, a Enum is able to map a particular string to a value, therefore we would need to have a enum for every
+  macid.
+  Every year there are new engineering students, therefore every year we would be required to change the enums for
+  every macid.
+  By knowing this, it would be much easier to simply use strings as Enums would make the software harder to maintain.
+
+\end{enumerate}
+
+\newpage
+
+\lstset{language=Python, basicstyle=\tiny, breaklines=true, showspaces=false,
+  showstringspaces=false, breakatwhitespace=true}
+%\lstset{language=C,linewidth=.94\textwidth,xleftmargin=1.1cm}
+
+\def\thesection{\Alph{section}}
+
+\section{Code for StdntAllocTypes.py}
+
+\noindent \lstinputlisting{../src/StdntAllocTypes.py}
+
+\newpage
+
+\section{Code for SeqADT.py}
+
+\noindent \lstinputlisting{../src/SeqADT.py}
+
+\newpage
+
+\section{Code for DCapALst.py}
+
+\noindent \lstinputlisting{../src/DCapALst.py}
+
+\newpage
+
+\section{Code for AALst.py}
+
+\noindent \lstinputlisting{../src/AALst.py}
+
+\newpage
+
+\section{Code for SALst.py}
+
+\noindent \lstinputlisting{../src/SALst.py}
+
+\newpage
+
+\section{Code for test_All.py}
+
+\noindent \lstinputlisting{../src/test_All.py}
+
+\newpage
+
+\section{Code for Read.py}
+
+\noindent \lstinputlisting{../src/Read.py}
+
+\newpage
+
+\section{Code for Partner's SeqADT.py}
+
+\noindent \lstinputlisting{../partner/SeqADT.py}
+
+\newpage
+
+\section{Code for Partner's DCapALst.py}
+
+\noindent \lstinputlisting{../partner/DCapALst.py}
+
+\newpage
+
+\section{Code for Partner's SALst.py}
+
+\noindent \lstinputlisting{../partner/SALst.py}
+
+\end {document}                                                                                                                                                             

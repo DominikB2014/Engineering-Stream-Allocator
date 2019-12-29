@@ -1,0 +1,62 @@
+\hypertarget{_read_8py}{}\section{src/\+Read.py File Reference}
+\label{_read_8py}\index{src/\+Read.\+py@{src/\+Read.\+py}}
+
+
+Read  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{_read_8py_a7537be937b193ab3e5832bc901b00b90}{Read.\+load\+\_\+stdnt\+\_\+data}
+\begin{DoxyCompactList}\small\item\em Loads students from a file into the S\+A\+Lst. \end{DoxyCompactList}\item 
+def \hyperlink{_read_8py_ac54f5ecc26c145536f077f195df9f907}{Read.\+load\+\_\+dcap\+\_\+data}
+\begin{DoxyCompactList}\small\item\em Loads department capacities from a file into the D\+Cap\+A\+Lst. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Read 
+
+\begin{DoxyAuthor}{Author}
+Dominik Buszowiecki 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+February 9, 2019 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_read_8py_file_ac54f5ecc26c145536f077f195df9f907}\label{_read_8py_file_ac54f5ecc26c145536f077f195df9f907}} 
+\index{Read.\+py@{Read.\+py}!load\+\_\+dcap\+\_\+data@{load\+\_\+dcap\+\_\+data}}
+\index{load\+\_\+dcap\+\_\+data@{load\+\_\+dcap\+\_\+data}!Read.\+py@{Read.\+py}}
+\subsubsection{\texorpdfstring{load\+\_\+dcap\+\_\+data()}{load\_dcap\_data()}}
+{\footnotesize\ttfamily def Read.\+load\+\_\+dcap\+\_\+data (\begin{DoxyParamCaption}\item[{}]{s }\end{DoxyParamCaption})}
+
+
+
+Loads department capacities from a file into the D\+Cap\+A\+Lst. 
+
+Each line in the file represents a department. The format of each line should be\+: ~\newline
+ department\+\_\+name, capacity ~\newline
+ where capacity is an integer. 
+\begin{DoxyParams}{Parameters}
+{\em s} & A string representing the name of the file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_read_8py_file_a7537be937b193ab3e5832bc901b00b90}\label{_read_8py_file_a7537be937b193ab3e5832bc901b00b90}} 
+\index{Read.\+py@{Read.\+py}!load\+\_\+stdnt\+\_\+data@{load\+\_\+stdnt\+\_\+data}}
+\index{load\+\_\+stdnt\+\_\+data@{load\+\_\+stdnt\+\_\+data}!Read.\+py@{Read.\+py}}
+\subsubsection{\texorpdfstring{load\+\_\+stdnt\+\_\+data()}{load\_stdnt\_data()}}
+{\footnotesize\ttfamily def Read.\+load\+\_\+stdnt\+\_\+data (\begin{DoxyParamCaption}\item[{}]{s }\end{DoxyParamCaption})}
+
+
+
+Loads students from a file into the S\+A\+Lst. 
+
+Each line in the file represents a student. The format of each line should be\+: ~\newline
+ macid, firstname, lastname, gender, gpa, \mbox{[}choice1, choice2, ...\mbox{]}, freechoice ~\newline
+ where gpa is a real number, gender is either male or female and freechoice is either True or False. 
+\begin{DoxyParams}{Parameters}
+{\em s} & A string representing the name of the file \\
+\hline
+\end{DoxyParams}

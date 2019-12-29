@@ -1,0 +1,177 @@
+\hypertarget{class_s_a_lst_1_1_s_a_lst}{}\section{S\+A\+Lst.\+S\+A\+Lst Class Reference}
+\label{class_s_a_lst_1_1_s_a_lst}\index{S\+A\+Lst.\+S\+A\+Lst@{S\+A\+Lst.\+S\+A\+Lst}}
+
+
+An abstract data type of all first year engineerng students.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_ac0886d79feebf875207b927b6d23a959}\label{class_s_a_lst_1_1_s_a_lst_ac0886d79feebf875207b927b6d23a959}} 
+def \hyperlink{class_s_a_lst_1_1_s_a_lst_ac0886d79feebf875207b927b6d23a959}{init} ()
+\begin{DoxyCompactList}\small\item\em init initializes the list of students to be empty \end{DoxyCompactList}\item 
+def \hyperlink{class_s_a_lst_1_1_s_a_lst_af097359087eff2e52ff94bcf1adfcb65}{add}
+\begin{DoxyCompactList}\small\item\em Adds a student into the \hyperlink{class_s_a_lst_1_1_s_a_lst}{S\+A\+Lst}. \end{DoxyCompactList}\item 
+def \hyperlink{class_s_a_lst_1_1_s_a_lst_a6c80e47dc1bacbb55188c22cd85af8b6}{remove}
+\begin{DoxyCompactList}\small\item\em Removes a student from the \hyperlink{class_s_a_lst_1_1_s_a_lst}{S\+A\+Lst}. \end{DoxyCompactList}\item 
+def \hyperlink{class_s_a_lst_1_1_s_a_lst_a400ec4c9364988723f6396b278cebf6a}{elm}
+\begin{DoxyCompactList}\small\item\em elm checks if a student is already in the \hyperlink{class_s_a_lst_1_1_s_a_lst}{S\+A\+Lst} \end{DoxyCompactList}\item 
+def \hyperlink{class_s_a_lst_1_1_s_a_lst_a036cbb53a35ec5cd293617ca24c522fd}{info}
+\begin{DoxyCompactList}\small\item\em returns the information assoaciated with a student \end{DoxyCompactList}\item 
+def \hyperlink{class_s_a_lst_1_1_s_a_lst_ac16206cda2affb174b739971b58eb519}{sort}
+\begin{DoxyCompactList}\small\item\em Sorts a subset of students based on G\+PA. \end{DoxyCompactList}\item 
+def \hyperlink{class_s_a_lst_1_1_s_a_lst_ae6178371d181c6b28be24a8c61b1bab7}{average}
+\begin{DoxyCompactList}\small\item\em Computes the average of a particular subset of students. \end{DoxyCompactList}\item 
+def \hyperlink{class_s_a_lst_1_1_s_a_lst_a8cdba5b89e936165b3628f52d4e80938}{allocate} ()
+\begin{DoxyCompactList}\small\item\em Allocates students in \hyperlink{class_s_a_lst_1_1_s_a_lst}{S\+A\+Lst} into their program \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract data type of all first year engineerng students. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_af097359087eff2e52ff94bcf1adfcb65}\label{class_s_a_lst_1_1_s_a_lst_af097359087eff2e52ff94bcf1adfcb65}} 
+\index{S\+A\+Lst\+::\+S\+A\+Lst@{S\+A\+Lst\+::\+S\+A\+Lst}!add@{add}}
+\index{add@{add}!S\+A\+Lst\+::\+S\+A\+Lst@{S\+A\+Lst\+::\+S\+A\+Lst}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily def S\+A\+Lst.\+S\+A\+Lst.\+add (\begin{DoxyParamCaption}\item[{}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Adds a student into the \hyperlink{class_s_a_lst_1_1_s_a_lst}{S\+A\+Lst}. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em throws} & Key\+Error if the student given has been added before \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em m} & A string of a student\textquotesingle{}s macid \\
+\hline
+{\em i} & Information of a student given with the data type \hyperlink{class_stdnt_alloc_types_1_1_s_info_t}{Stdnt\+Alloc\+Types.\+S\+InfoT} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_a8cdba5b89e936165b3628f52d4e80938}\label{class_s_a_lst_1_1_s_a_lst_a8cdba5b89e936165b3628f52d4e80938}} 
+\index{S\+A\+Lst\+::\+S\+A\+Lst@{S\+A\+Lst\+::\+S\+A\+Lst}!allocate@{allocate}}
+\index{allocate@{allocate}!S\+A\+Lst\+::\+S\+A\+Lst@{S\+A\+Lst\+::\+S\+A\+Lst}}
+\subsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily def S\+A\+Lst.\+S\+A\+Lst.\+allocate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Allocates students in \hyperlink{class_s_a_lst_1_1_s_a_lst}{S\+A\+Lst} into their program 
+
+Students are allocated into a department in A\+A\+Lst. Students with free choice are allocated first. The remaining students are allocated in a order based on their G\+PA, a student is allocated into their highest preferred choice that is not full in capacity. 
+\begin{DoxyExceptions}{Exceptions}
+{\em throws} & Runtime\+Error if all of a student\textquotesingle{}s choices are full. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_ae6178371d181c6b28be24a8c61b1bab7}\label{class_s_a_lst_1_1_s_a_lst_ae6178371d181c6b28be24a8c61b1bab7}} 
+\index{S\+A\+Lst\+::\+S\+A\+Lst@{S\+A\+Lst\+::\+S\+A\+Lst}!average@{average}}
+\index{average@{average}!S\+A\+Lst\+::\+S\+A\+Lst@{S\+A\+Lst\+::\+S\+A\+Lst}}
+\subsubsection{\texorpdfstring{average()}{average()}}
+{\footnotesize\ttfamily def S\+A\+Lst.\+S\+A\+Lst.\+average (\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Computes the average of a particular subset of students. 
+
+The method is given a function that is able to filter a student. The function takes in a student(\+S\+Info\+T) and returns True if they pass the filter. The method will then compute the average G\+PA amongst students who passed the filter. 
+\begin{DoxyExceptions}{Exceptions}
+{\em throws} & Value\+Error if there are no students that pass the filter function. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & A filtering function that returns a boolean \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A float representing the average G\+PA amongst a subset of students 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_a400ec4c9364988723f6396b278cebf6a}\label{class_s_a_lst_1_1_s_a_lst_a400ec4c9364988723f6396b278cebf6a}} 
+\index{S\+A\+Lst\+::\+S\+A\+Lst@{S\+A\+Lst\+::\+S\+A\+Lst}!elm@{elm}}
+\index{elm@{elm}!S\+A\+Lst\+::\+S\+A\+Lst@{S\+A\+Lst\+::\+S\+A\+Lst}}
+\subsubsection{\texorpdfstring{elm()}{elm()}}
+{\footnotesize\ttfamily def S\+A\+Lst.\+S\+A\+Lst.\+elm (\begin{DoxyParamCaption}\item[{}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+elm checks if a student is already in the \hyperlink{class_s_a_lst_1_1_s_a_lst}{S\+A\+Lst} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & A string of a student\textquotesingle{}s macid \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a student is in \hyperlink{class_s_a_lst_1_1_s_a_lst}{S\+A\+Lst}, otherwise False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_a036cbb53a35ec5cd293617ca24c522fd}\label{class_s_a_lst_1_1_s_a_lst_a036cbb53a35ec5cd293617ca24c522fd}} 
+\index{S\+A\+Lst\+::\+S\+A\+Lst@{S\+A\+Lst\+::\+S\+A\+Lst}!info@{info}}
+\index{info@{info}!S\+A\+Lst\+::\+S\+A\+Lst@{S\+A\+Lst\+::\+S\+A\+Lst}}
+\subsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily def S\+A\+Lst.\+S\+A\+Lst.\+info (\begin{DoxyParamCaption}\item[{}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+returns the information assoaciated with a student 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em throws} & Key\+Error if the student is not found \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em m} & A string of a student\textquotesingle{}s macid \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A students information with the type \hyperlink{class_stdnt_alloc_types_1_1_s_info_t}{Stdnt\+Alloc\+Types.\+S\+InfoT} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_a6c80e47dc1bacbb55188c22cd85af8b6}\label{class_s_a_lst_1_1_s_a_lst_a6c80e47dc1bacbb55188c22cd85af8b6}} 
+\index{S\+A\+Lst\+::\+S\+A\+Lst@{S\+A\+Lst\+::\+S\+A\+Lst}!remove@{remove}}
+\index{remove@{remove}!S\+A\+Lst\+::\+S\+A\+Lst@{S\+A\+Lst\+::\+S\+A\+Lst}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily def S\+A\+Lst.\+S\+A\+Lst.\+remove (\begin{DoxyParamCaption}\item[{}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Removes a student from the \hyperlink{class_s_a_lst_1_1_s_a_lst}{S\+A\+Lst}. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em throws} & Key\+Error if a student to be removed is not found \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em m} & A string of a student\textquotesingle{}s macid \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_a_lst_1_1_s_a_lst_ac16206cda2affb174b739971b58eb519}\label{class_s_a_lst_1_1_s_a_lst_ac16206cda2affb174b739971b58eb519}} 
+\index{S\+A\+Lst\+::\+S\+A\+Lst@{S\+A\+Lst\+::\+S\+A\+Lst}!sort@{sort}}
+\index{sort@{sort}!S\+A\+Lst\+::\+S\+A\+Lst@{S\+A\+Lst\+::\+S\+A\+Lst}}
+\subsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily def S\+A\+Lst.\+S\+A\+Lst.\+sort (\begin{DoxyParamCaption}\item[{}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sorts a subset of students based on G\+PA. 
+
+The method is given a function that is able to filter a student. The filter function takes in a student (S\+InfoT) and returns True if they pass the filter. The method will return a list of macids that passed the filter, sorted by their G\+PA in descending order. 
+\begin{DoxyParams}{Parameters}
+{\em f} & A filtering function that returns a boolean \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of strings (each string is a macid) sorted by their G\+PA in descending order 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_s_a_lst_8py}{S\+A\+Lst.\+py}\end{DoxyCompactItemize}

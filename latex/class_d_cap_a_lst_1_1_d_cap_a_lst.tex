@@ -1,0 +1,115 @@
+\hypertarget{class_d_cap_a_lst_1_1_d_cap_a_lst}{}\section{D\+Cap\+A\+Lst.\+D\+Cap\+A\+Lst Class Reference}
+\label{class_d_cap_a_lst_1_1_d_cap_a_lst}\index{D\+Cap\+A\+Lst.\+D\+Cap\+A\+Lst@{D\+Cap\+A\+Lst.\+D\+Cap\+A\+Lst}}
+
+
+An abstract data type containing the capacities of engineering departments as a list.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_d_cap_a_lst_1_1_d_cap_a_lst_aaed5d536e93c43a53eca6c75faa64d2e}\label{class_d_cap_a_lst_1_1_d_cap_a_lst_aaed5d536e93c43a53eca6c75faa64d2e}} 
+def \hyperlink{class_d_cap_a_lst_1_1_d_cap_a_lst_aaed5d536e93c43a53eca6c75faa64d2e}{init} ()
+\begin{DoxyCompactList}\small\item\em Initializes the Department Capacity List to be empty. \end{DoxyCompactList}\item 
+def \hyperlink{class_d_cap_a_lst_1_1_d_cap_a_lst_a7ae2713aa4cf52277bf95d345033aef1}{add}
+\begin{DoxyCompactList}\small\item\em Adds a department and its capacity to the list. \end{DoxyCompactList}\item 
+def \hyperlink{class_d_cap_a_lst_1_1_d_cap_a_lst_a8c708603e65c31aaf03449c3e449a900}{remove}
+\begin{DoxyCompactList}\small\item\em Removes a department and its capacity from the list \end{DoxyCompactList}\item 
+def \hyperlink{class_d_cap_a_lst_1_1_d_cap_a_lst_a1544d1dd5a4da06d12379ff2b752b5fc}{elm}
+\begin{DoxyCompactList}\small\item\em elm checks if a department has been added \end{DoxyCompactList}\item 
+def \hyperlink{class_d_cap_a_lst_1_1_d_cap_a_lst_a60327f8162913725028ca07da0d14e69}{capacity}
+\begin{DoxyCompactList}\small\item\em capacity returns the capacity of a department \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstract data type containing the capacities of engineering departments as a list. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_d_cap_a_lst_1_1_d_cap_a_lst_a7ae2713aa4cf52277bf95d345033aef1}\label{class_d_cap_a_lst_1_1_d_cap_a_lst_a7ae2713aa4cf52277bf95d345033aef1}} 
+\index{D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst@{D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst}!add@{add}}
+\index{add@{add}!D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst@{D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily def D\+Cap\+A\+Lst.\+D\+Cap\+A\+Lst.\+add (\begin{DoxyParamCaption}\item[{}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Adds a department and its capacity to the list. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em throws} & Key\+Error if the given department has been added before \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em d} & A department of type \hyperlink{class_stdnt_alloc_types_1_1_dept_t}{Stdnt\+Alloc\+Types.\+DeptT} \\
+\hline
+{\em n} & An integer representing the capacity of the department (d parameter) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_d_cap_a_lst_1_1_d_cap_a_lst_a60327f8162913725028ca07da0d14e69}\label{class_d_cap_a_lst_1_1_d_cap_a_lst_a60327f8162913725028ca07da0d14e69}} 
+\index{D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst@{D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst}!capacity@{capacity}}
+\index{capacity@{capacity}!D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst@{D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst}}
+\subsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily def D\+Cap\+A\+Lst.\+D\+Cap\+A\+Lst.\+capacity (\begin{DoxyParamCaption}\item[{}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+capacity returns the capacity of a department 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em throws} & Key\+Error if the department given is not in \hyperlink{class_d_cap_a_lst_1_1_d_cap_a_lst}{D\+Cap\+A\+Lst} \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em d} & A department of type \hyperlink{class_stdnt_alloc_types_1_1_dept_t}{Stdnt\+Alloc\+Types.\+DeptT} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer representing the capacity of the department given as a parameter. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_cap_a_lst_1_1_d_cap_a_lst_a1544d1dd5a4da06d12379ff2b752b5fc}\label{class_d_cap_a_lst_1_1_d_cap_a_lst_a1544d1dd5a4da06d12379ff2b752b5fc}} 
+\index{D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst@{D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst}!elm@{elm}}
+\index{elm@{elm}!D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst@{D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst}}
+\subsubsection{\texorpdfstring{elm()}{elm()}}
+{\footnotesize\ttfamily def D\+Cap\+A\+Lst.\+D\+Cap\+A\+Lst.\+elm (\begin{DoxyParamCaption}\item[{}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+elm checks if a department has been added 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & A department of type \hyperlink{class_stdnt_alloc_types_1_1_dept_t}{Stdnt\+Alloc\+Types.\+DeptT} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the department has been added, otherwise False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_cap_a_lst_1_1_d_cap_a_lst_a8c708603e65c31aaf03449c3e449a900}\label{class_d_cap_a_lst_1_1_d_cap_a_lst_a8c708603e65c31aaf03449c3e449a900}} 
+\index{D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst@{D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst}!remove@{remove}}
+\index{remove@{remove}!D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst@{D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily def D\+Cap\+A\+Lst.\+D\+Cap\+A\+Lst.\+remove (\begin{DoxyParamCaption}\item[{}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Removes a department and its capacity from the list 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em throws} & Key\+Error if the given department is not in \hyperlink{class_d_cap_a_lst_1_1_d_cap_a_lst}{D\+Cap\+A\+Lst} \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em d} & A department of type \hyperlink{class_stdnt_alloc_types_1_1_dept_t}{Stdnt\+Alloc\+Types.\+DeptT} to be removed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_d_cap_a_lst_8py}{D\+Cap\+A\+Lst.\+py}\end{DoxyCompactItemize}

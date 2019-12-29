@@ -1,0 +1,106 @@
+\begin{theindex}
+
+  \item {\+\_\+\+\_\+init\+\_\+\+\_\+}
+    \subitem {Seq\+A\+D\+T\+::\+Seq\+A\+DT}, \hyperpage{16}
+
+  \indexspace
+
+  \item {A\+A\+Lst.\+A\+A\+Lst}, \hyperpage{7}
+  \item {A\+A\+Lst\+::\+A\+A\+Lst}
+    \subitem {add\+\_\+stdnt}, \hyperpage{7}
+    \subitem {init}, \hyperpage{8}
+    \subitem {lst\+\_\+alloc}, \hyperpage{8}
+    \subitem {num\+\_\+alloc}, \hyperpage{8}
+  \item {add}
+    \subitem {D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst}, \hyperpage{9}
+    \subitem {S\+A\+Lst\+::\+S\+A\+Lst}, \hyperpage{12}
+  \item {add\+\_\+stdnt}
+    \subitem {A\+A\+Lst\+::\+A\+A\+Lst}, \hyperpage{7}
+  \item {allocate}
+    \subitem {S\+A\+Lst\+::\+S\+A\+Lst}, \hyperpage{13}
+  \item {average}
+    \subitem {S\+A\+Lst\+::\+S\+A\+Lst}, \hyperpage{13}
+
+  \indexspace
+
+  \item {capacity}
+    \subitem {D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst}, \hyperpage{9}
+
+  \indexspace
+
+  \item {D\+Cap\+A\+Lst.\+D\+Cap\+A\+Lst}, \hyperpage{9}
+  \item {D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst}
+    \subitem {add}, \hyperpage{9}
+    \subitem {capacity}, \hyperpage{9}
+    \subitem {elm}, \hyperpage{10}
+    \subitem {remove}, \hyperpage{10}
+
+  \indexspace
+
+  \item {elm}
+    \subitem {D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst}, \hyperpage{10}
+    \subitem {S\+A\+Lst\+::\+S\+A\+Lst}, \hyperpage{14}
+  \item {end}
+    \subitem {Seq\+A\+D\+T\+::\+Seq\+A\+DT}, \hyperpage{16}
+
+  \indexspace
+
+  \item {info}
+    \subitem {S\+A\+Lst\+::\+S\+A\+Lst}, \hyperpage{14}
+  \item {init}
+    \subitem {A\+A\+Lst\+::\+A\+A\+Lst}, \hyperpage{8}
+
+  \indexspace
+
+  \item {load\+\_\+dcap\+\_\+data}
+    \subitem {Read.\+py}, \hyperpage{20}
+  \item {load\+\_\+stdnt\+\_\+data}
+    \subitem {Read.\+py}, \hyperpage{21}
+  \item {lst\+\_\+alloc}
+    \subitem {A\+A\+Lst\+::\+A\+A\+Lst}, \hyperpage{8}
+
+  \indexspace
+
+  \item {next}
+    \subitem {Seq\+A\+D\+T\+::\+Seq\+A\+DT}, \hyperpage{16}
+  \item {num\+\_\+alloc}
+    \subitem {A\+A\+Lst\+::\+A\+A\+Lst}, \hyperpage{8}
+
+  \indexspace
+
+  \item {Read.\+py}
+    \subitem {load\+\_\+dcap\+\_\+data}, \hyperpage{20}
+    \subitem {load\+\_\+stdnt\+\_\+data}, \hyperpage{21}
+  \item {remove}
+    \subitem {D\+Cap\+A\+Lst\+::\+D\+Cap\+A\+Lst}, \hyperpage{10}
+    \subitem {S\+A\+Lst\+::\+S\+A\+Lst}, \hyperpage{14}
+
+  \indexspace
+
+  \item {S\+A\+Lst.\+S\+A\+Lst}, \hyperpage{12}
+  \item {S\+A\+Lst\+::\+S\+A\+Lst}
+    \subitem {add}, \hyperpage{12}
+    \subitem {allocate}, \hyperpage{13}
+    \subitem {average}, \hyperpage{13}
+    \subitem {elm}, \hyperpage{14}
+    \subitem {info}, \hyperpage{14}
+    \subitem {remove}, \hyperpage{14}
+    \subitem {sort}, \hyperpage{15}
+  \item {Seq\+A\+D\+T.\+Seq\+A\+DT}, \hyperpage{15}
+  \item {Seq\+A\+D\+T\+::\+Seq\+A\+DT}
+    \subitem {\+\_\+\+\_\+init\+\_\+\+\_\+}, \hyperpage{16}
+    \subitem {end}, \hyperpage{16}
+    \subitem {next}, \hyperpage{16}
+  \item {sort}
+    \subitem {S\+A\+Lst\+::\+S\+A\+Lst}, \hyperpage{15}
+  \item {src/\+A\+A\+Lst.\+py}, \hyperpage{19}
+  \item {src/\+D\+Cap\+A\+Lst.\+py}, \hyperpage{19}
+  \item {src/\+Read.\+py}, \hyperpage{20}
+  \item {src/\+S\+A\+Lst.\+py}, \hyperpage{21}
+  \item {src/\+Seq\+A\+D\+T.\+py}, \hyperpage{21}
+  \item {src/\+Stdnt\+Alloc\+Types.\+py}, \hyperpage{22}
+  \item {Stdnt\+Alloc\+Types.\+DeptT}, \hyperpage{11}
+  \item {Stdnt\+Alloc\+Types.\+GenT}, \hyperpage{11}
+  \item {Stdnt\+Alloc\+Types.\+S\+InfoT}, \hyperpage{17}
+
+\end{theindex}
